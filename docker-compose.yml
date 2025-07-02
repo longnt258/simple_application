@@ -6,7 +6,31 @@ services:
     container_name: simple_application
     ports:
       - "8080:80"
-      
+
     ## Just for development
     # volumes:
     #   - ./application/src:/var/www/html
+
+    ## Run mysql service first and then run app service --> ensure the connection
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.4.5
+    container_name: simple_database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+    ## Should not be exposed to the host machine in production (remove the ports line)
+    # ports: 
+    #   - "3306:3306" 
+    volumes:
+      - data:/var/lib/mysql
+      - ./application/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+volumes:
+  data: # /var/lib/docker/volumes/<project name>_data/_data/

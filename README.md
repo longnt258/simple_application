@@ -2,21 +2,32 @@
 
 ## DESCRIPTION
 - Run application on Docker.
-- Migrate Jenkins to support building and deployment.
 - Push the source code to Github repo.
+- Migrate MySQL to application.
+- Migrate Jenkins to support building and deployment.
 - Jenkins automatic build and deploy when pushing a new code.
 
 ## TECHNOLOGY
+- Git
 - Docker
 - PHP
+- MySQL
 - Jenkins
-- Git
 
 ## STEP BY STEP
 - Create and deploy PHP project.
-- Run application with Apache2 server
-  + Build a Docker container running Apache2 (docker-compose.yml)
-  + Migrate the PHP to apache2 (php:8.4.8-apache docker image)
-- Seperate to Dockerfile to build php application with apache server
-  + Add Dockerfile to .application/src
+
+- Run application with Apache2 server:
+  + Build a Docker container running Apache2 (docker-compose.yml).
+  + Migrate the PHP to apache2 (php:8.4.8-apache docker image).
+
+- Seperate to Dockerfile to build php application with apache server:
+  + Add Dockerfile to .application/src.
+
+- Install MySQL with Docker:
+  + Create an initial file to create the first data.
+  + No expose the mysql port to internet (No use "ports" definition).
+
+- Run PHP application with MySQL:
+  + 
 
