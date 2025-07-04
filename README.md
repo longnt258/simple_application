@@ -34,4 +34,12 @@
 - Set the static IP for application and DB :
   + Set the range of the IPs.
   + Set each servers with a specific IP.
+  + Private IP:
+    . Application: 10.10.0.20  -->  expose 127.0.0.1:8080
+    . DB: 10.10.0.10
+    . Docker: 10.10.0.0/16
+  
+- Setup the port forwarding to external internet (8080)
+
+
 
