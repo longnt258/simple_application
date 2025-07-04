@@ -1,14 +1,19 @@
 <?php
 
 class Database {
-  private $host='mysql';
-  private $user='user';
-  private $pwd='password';
-  private $db='mydb';
+  private $host;
+  private $user;
+  private $pwd;
+  private $db;
   private $conn;
 
   public function __construct()
   {
+    $this->host = getenv('DB_HOST');
+    $this->user = getenv('DB_USER');
+    $this->pwd = getenv('DB_PWD');
+    $this->db = getenv('DB_NAME');
+
     $this->conn = new mysqli($this->host, $this->user, $this->pwd, $this->db);
   }
 
@@ -31,5 +36,10 @@ class Database {
   }
 }
 
-$conn = new Database();
-echo $conn->getBooks();
+try {
+  $conn = new Database();
+
+  echo $conn->getBooks();
+} catch (Exception $e) {
+  echo "Connection failed: " . $e->getMessage();
+}

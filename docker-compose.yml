@@ -7,13 +7,21 @@ services:
     ports:
       - "8080:80"
 
-    ## Just for development
-    # volumes:
-    #   - ./application/src:/var/www/html
+    # Just for development
+    volumes:
+      - ./application/src:/var/www/html
 
-    ## Run mysql service first and then run app service --> ensure the connection
+    ## Run MySQL service first and then run app service --> ensure the connection
     depends_on:
       - mysql
+    environment:
+      - DB_HOST
+      - DB_NAME
+      - DB_USER
+      - DB_PWD
+    networks:
+      default:
+        ipv4_address: 10.10.0.20
 
   mysql:
     image: mysql:8.4.5
@@ -29,8 +37,20 @@ services:
     # ports: 
     #   - "3306:3306" 
     volumes:
-      - data:/var/lib/mysql
-      - ./application/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - data:/var/lib/mysql  # Save data in a named volume
+      - ./application/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro\
+    networks:
+      default:
+        ipv4_address: 10.10.0.10
 
 volumes:
   data: # /var/lib/docker/volumes/<project name>_data/_data/
+
+
+# Confiure the network to use statis IPs
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.0.0/16

@@ -29,5 +29,9 @@
   + No expose the mysql port to internet (No use "ports" definition).
 
 - Run PHP application with MySQL:
-  + 
+  + Get the information of MySQL db by environment (no hard code) -> use .env file and declare variable in app service in docker-compose.yml.
+
+- Set the static IP for application and DB :
+  + Set the range of the IPs.
+  + Set each servers with a specific IP.
 
