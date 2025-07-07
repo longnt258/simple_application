@@ -39,7 +39,10 @@
     . DB: 10.10.0.10
     . Docker: 10.10.0.0/16
   
-- Setup the port forwarding to external internet (8080)
+- Setup the port forwarding to external internet on the router (8080)
 
+- Setup the reverse proxy (nginx)
+  + Create a folder with nginx configuration
+  + Setup configuration in docker-compose
 
 

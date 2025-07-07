@@ -4,12 +4,14 @@ services:
   app:
     build: ./application
     container_name: simple_application
-    ports:
-      - "8080:80"
+    # ports:
+    #   - "8080:80"
+    # expose:
+    #   - "80" # Expose port 80 to other containers in the same network
 
     # Just for development
-    volumes:
-      - ./application/src:/var/www/html
+    # volumes:
+    #   - ./application/src:/var/www/html
 
     ## Run MySQL service first and then run app service --> ensure the connection
     depends_on:
@@ -42,6 +44,19 @@ services:
     networks:
       default:
         ipv4_address: 10.10.0.10
+
+  nginx:
+    build: ./nginx
+    container_name: reverse_proxy
+    ports:
+      - "8080:80"
+    # volumes:
+    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+    networks:
+      default:
+        ipv4_address: 10.10.0.30
 
 volumes:
   data: # /var/lib/docker/volumes/<project name>_data/_data/
