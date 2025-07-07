@@ -6,12 +6,16 @@ services:
     container_name: simple_application
     # ports:
     #   - "8080:80"
-    # expose:
-    #   - "80" # Expose port 80 to other containers in the same network
+    expose:
+      - "80"
 
-    # Just for development
-    # volumes:
-    #   - ./application/src:/var/www/html
+    volumes:
+      ## Just for development
+      # - ./application/src:/var/www/html
+      ## Mount logs to the host machine for easier debugging
+      - ./logs/apache:/var/log/apache2
+      - ./logs/php:/var/log
+      - ./application/apache.conf:/etc/apache2/conf-available/security.conf:ro
 
     ## Run MySQL service first and then run app service --> ensure the connection
     depends_on:
@@ -38,9 +42,13 @@ services:
     ## Should not be exposed to the host machine in production (remove the ports line)
     # ports: 
     #   - "3306:3306" 
+    expose:
+      - "3306"
     volumes:
       - data:/var/lib/mysql  # Save data in a named volume
+      - ./logs/mysql:/var/log/mysql # Save logs
       - ./application/db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro\
+      - ./application/db/my.conf:/etc/mysql/my.cnf:ro
     networks:
       default:
         ipv4_address: 10.10.0.10
@@ -50,10 +58,15 @@ services:
     container_name: reverse_proxy
     ports:
       - "8080:80"
-    # volumes:
-    #   - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./logs/nginx:/var/log/nginx
     depends_on:
       - app
+    restart: always
+    # read_only: true
+    tmpfs:
+      - /tmp
     networks:
       default:
         ipv4_address: 10.10.0.30

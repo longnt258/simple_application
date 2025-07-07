@@ -1,3 +1,10 @@
+CREATE DATABASE IF NOT EXISTS mydb;
+
+-- Create an user with the limited permission (the user is the same as the one using connecting to the MySQL server in the application)
+-- CREATE USER IF NOT EXISTS 'simple_user'@'%' IDENTIFIED BY 'simple_password';
+-- GRANT SELECT, INSERT, UPDATE, DELETE ON mydb.* TO 'simple_user'@'%';
+-- FLUSH PRIVILEGES;
+
 USE mydb;
 
 DROP TABLE IF EXISTS book;
