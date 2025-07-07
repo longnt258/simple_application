@@ -1,21 +1,12 @@
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.10.0.20. Set the 'ServerName' directive globally to suppress this message
-[Mon Jul 07 04:30:45.744880 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
-[Mon Jul 07 04:30:45.744911 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-[Mon Jul 07 04:32:28.173080 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jul 07 14:24:16.589572 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
+[Mon Jul 07 14:24:16.589609 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jul 07 14:30:39.349246 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.10.0.20. Set the 'ServerName' directive globally to suppress this message
-[Mon Jul 07 09:42:43.251028 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
-[Mon Jul 07 09:42:43.251057 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-[Mon Jul 07 09:44:43.319889 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jul 07 14:30:46.767218 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
+[Mon Jul 07 14:30:46.767249 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jul 07 14:39:33.891755 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.10.0.20. Set the 'ServerName' directive globally to suppress this message
-[Mon Jul 07 13:06:44.507106 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
-[Mon Jul 07 13:06:44.507164 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-[Mon Jul 07 13:07:40.067047 2025] [php:error] [pid 20:tid 20] [client 10.10.0.30:42296] script '/var/www/html/booj.php' not found or unable to stat
-[Mon Jul 07 13:50:27.372444 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.10.0.20. Set the 'ServerName' directive globally to suppress this message
-[Mon Jul 07 13:50:36.453195 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
-[Mon Jul 07 13:50:36.453230 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-[Mon Jul 07 13:51:07.229195 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
-AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 10.10.0.20. Set the 'ServerName' directive globally to suppress this message
-[Mon Jul 07 13:51:28.725936 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
-[Mon Jul 07 13:51:28.725990 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
-[Mon Jul 07 14:04:17.830880 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jul 07 14:42:38.738004 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.62 (Debian) configured -- resuming normal operations
+[Mon Jul 07 14:42:38.738040 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jul 07 14:52:15.036789 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
