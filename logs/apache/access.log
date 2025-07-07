@@ -1,8 +1,0 @@
-10.10.0.30 - - [07/Jul/2025:14:30:58 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
-10.10.0.30 - - [07/Jul/2025:14:31:23 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46"
-10.10.0.30 - - [07/Jul/2025:14:31:25 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36 EdgA/137.0.0.0"
-10.10.0.30 - - [07/Jul/2025:14:31:35 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36 EdgA/137.0.0.0"
-10.10.0.30 - - [07/Jul/2025:14:43:35 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36"
-10.10.0.30 - - [07/Jul/2025:14:43:35 +0000] "GET /favicon.ico HTTP/1.0" 404 360 "http://113.172.84.41:8080/" "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36"
-10.10.0.30 - - [07/Jul/2025:14:47:13 +0000] "GET / HTTP/1.0" 200 217 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36 Edg/90.0.818.46"
-10.10.0.30 - - [07/Jul/2025:14:50:12 +0000] "GET /?Z75419117091Q1 HTTP/1.0" 200 217 "https://google.com/" "Mozilla/5.0 (Windows NT 6.1; rv:16.0) Gecko/20100101 Firefox/16.0 (+https://best-proxies.ru/faq/#from)"
